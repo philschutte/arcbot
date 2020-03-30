@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 const token = require('./config.js');
+const utils = require('./const.js');
 
 client.on('ready', () => {
     console.info('Connected');
@@ -20,11 +21,7 @@ client.on('message', msg => {
         args = args.splice(1);
         switch(cmd) {
             case 'pathetic':
-                msg.channel.send('', {files: [
-                    './assets/imgs/pa.png',
-                    './assets/imgs/the.png',
-                    './assets/imgs/tic.png'
-                ]});
+                msg.channel.send('', {files: utils.pathetic()});
                 break;
         }
     }
