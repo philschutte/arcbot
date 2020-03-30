@@ -10,9 +10,23 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-    // TODO replace 'bot.id' with bot id when we have it
+
     if (msg.content.includes('crotch') && msg.author.id != '693982221924696116') {
         msg.channel.send(`<@${msg.author.id}>, ze crotch is my domain!`)
+    }
+    if (msg.content.substring(0,1) === '!') {
+        let args = msg.content.substring(1).split(' ');
+        let cmd = args[0];
+        args = args.splice(1);
+        switch(cmd) {
+            case 'pathetic':
+                msg.channel.send('', {files: [
+                    './assets/imgs/pa.png',
+                    './assets/imgs/the.png',
+                    './assets/imgs/tic.png'
+                ]});
+                break;
+        }
     }
 })
 
