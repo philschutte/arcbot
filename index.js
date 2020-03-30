@@ -11,7 +11,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
     // TODO replace 'bot.id' with bot id when we have it
-    if (msg.content.includes('crotch') && msg.author.id != 'bot id') { 
+    if (msg.content.includes('crotch') && msg.author.id != '693982221924696116') {
         msg.channel.send(`<@${msg.author.id}>, ze crotch is my domain!`)
     }
 })
