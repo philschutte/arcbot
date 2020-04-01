@@ -26,6 +26,8 @@ client.on('message', msg => {
                 msg.channel.send('', {files: utils.pathetic()});
                 break;
             case 'love':
+            case 'rkami':
+            case 'jmo':
                 if (Boolean(vc)) {
                     vc.join().then(connection => {
                         const dispatcher = connection.play(utils.voiceClip(cmd));
@@ -36,6 +38,7 @@ client.on('message', msg => {
                     setTimeout(() => vc.leave(), 5 * 60 * 1000);
                 }
                 break;
+                } 
         }
     }
 })
