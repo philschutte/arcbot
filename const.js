@@ -13,5 +13,10 @@ module.exports.voiceClip = (cmd) => {
     switch(cmd.toLowerCase()) {
         case 'love':
             return './assets/audio/berserker.wav';
+        case 'jmo':
+            return './assets/audio/jmo.wav';
+        case 'rkami':
+            return './assets/audio/rkami.wav';
+            
     }
 }
