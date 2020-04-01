@@ -38,7 +38,6 @@ client.on('message', msg => {
                     setTimeout(() => vc.leave(), 5 * 60 * 1000);
                 }
                 break;
-                } 
         }
     }
 })
