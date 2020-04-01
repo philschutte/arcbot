@@ -17,6 +17,6 @@ module.exports.voiceClip = (cmd) => {
             return './assets/audio/jmo.wav';
         case 'rkami':
             return './assets/audio/rkami.wav';
-            
+        break;
     }
 }
