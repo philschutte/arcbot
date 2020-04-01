@@ -8,3 +8,10 @@ module.exports.pathetic = () => {
 let keys = Object.keys(asuka);
 return asuka[keys[ keys.length * Math.random() << 0]];
 };
+
+module.exports.voiceClip = (cmd) => {
+    switch(cmd.toLowerCase()) {
+        case 'love':
+            return './assets/audio/berserker.wav';
+    }
+}
