@@ -41,7 +41,7 @@ client.on('message', msg => {
             case 'art':
                 if (Boolean(vc)) {
                     vc.join().then(connection => {
-                        const dispatcher = connection.play(utils.voiceClip(cmd));
+                        const dispatcher = connection.play(`./assets/audio/${cmd.toLowerCase()}`);
                         dispatcher.on("end", end => {});
                     }).catch(err => {
                         console.log(err);
