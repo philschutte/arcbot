@@ -17,11 +17,11 @@ client.on('message', msg => {
     }
     if (msg.content.substring(0,1) === '!') {
         let args = msg.content.substring(1).split(' ');
-        let cmd = args[0];
+        let cmd = args[0].toLowerCase();
         let id = msg.member.voice.channelID;
         let vc = client.channels.cache.get(id);
         args = args.splice(1);
-        switch(cmd.toLowerCase()) {
+        switch(cmd) {
             case 'pathetic':
                 msg.channel.send('', {files: utils.pathetic()});
                 break;
@@ -41,7 +41,7 @@ client.on('message', msg => {
             case 'art':
                 if (Boolean(vc)) {
                     vc.join().then(connection => {
-                        const dispatcher = connection.play(`./assets/audio/${cmd.toLowerCase()}`);
+                        const dispatcher = connection.play(`./assets/audio/${cmd}`);
                         dispatcher.on("end", end => {});
                     }).catch(err => {
                         console.log(err);
