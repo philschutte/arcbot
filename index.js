@@ -28,6 +28,17 @@ client.on('message', msg => {
             case 'love':
             case 'rkami':
             case 'jmo':
+            case 'wake':
+            case 'bar':
+            case 'pizza':
+            case 'shipment':
+            case 'shitment':
+            case 'bargin':
+            case 'munchies':
+            case 'midi':
+            case 'skin':
+            case 'heed':
+            case 'art':
                 if (Boolean(vc)) {
                     vc.join().then(connection => {
                         const dispatcher = connection.play(utils.voiceClip(cmd));
