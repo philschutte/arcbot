@@ -46,7 +46,7 @@ client.on('message', msg => {
             case 'chins':
             case 'dexter':
             case 'larry':
-            case 'dc':
+            case 'washington':
             case 'bawls':
             case 'bawls2':
             case 'padme':
