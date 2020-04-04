@@ -40,9 +40,6 @@ client.on('message', msg => {
             case 'heed':
             case 'art':
             case 'mcguffin':
-            case 'skin':
-            case 'heed':
-            case 'art':
             case 'fanfare':
             case 'rva':
             case 'chinmad':
