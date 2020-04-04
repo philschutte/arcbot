@@ -18,7 +18,7 @@ client.on('message', msg => {
     if (msg.content.substring(0,1) === '!') {
         let args = msg.content.substring(1).split(' ');
         let cmd = args[0].toLowerCase();
-        let voiceClip = Boolean(utils.getVC(cmd));
+        let voiceClip = utils.getVC(cmd);
         let id = msg.member.voice.channelID;
         let vc = client.channels.cache.get(id);
         args = args.splice(1);
