@@ -72,7 +72,7 @@ client.on('message', msg => {
             case 'jims':
             case 'sand':
             case 'shoes1':
-            case 'shoes2':
+            case 'runes2':
             case 'shoes3':
             case 'shoes5':
             case 'jedi':
