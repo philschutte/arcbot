@@ -37,7 +37,7 @@ client.on('message', msg => {
             case 'pathetic':
                 msg.channel.send('', {files: utils.pathetic()});
                 break;
-
+                
         }
     }
 })
