@@ -32,13 +32,14 @@ client.on('message', msg => {
                 });
                 setTimeout(() => vc.leave(), 5 * 60 * 1000);
             }
+            msg.delete({setTimeout: 10000});
         }
         switch(cmd) {
             case 'pathetic':
                 msg.channel.send('', {files: utils.pathetic()});
+                msg.delete({setTimeout: 10000});
                 break;
-                
-        }
+        }        
     }
 })
 
