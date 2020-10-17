@@ -20,9 +20,7 @@ client.on('message', msg => {
     if (msg.content.substring(0,1) === '!') {
         let args = msg.content.substring(1).split(' ');
         let cmd = args[0].toLowerCase();
-        let voiceClip = commands.getVC(cmd);
         let id = msg.member.voice.channelID;
-        let vc = client.channels.cache.get(id);
         args = args.splice(1);
         if (fs.existsSync(path.join(__dirname, `../assets/audio/${cmd}`))) {
             let vc = client.channels.cache.get(id);
