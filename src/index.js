@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const fs = require('fs');
+const path = require('path');
 
 const token = require('./config.js');
 const commands = require('./commands/index.js');
@@ -22,17 +24,9 @@ client.on('message', msg => {
         let id = msg.member.voice.channelID;
         let vc = client.channels.cache.get(id);
         args = args.splice(1);
-        if (Boolean(voiceClip)) {
-            if (Boolean(vc)) {
-                vc.join().then(connection => {
-                    const dispatcher = connection.play(`${voiceClip}`);
-                    dispatcher.on("end", end => {});
-                }).catch(err => {
-                    console.log(err);
-                });
-                setTimeout(() => vc.leave(), 5 * 60 * 1000);
-            }
-            msg.delete({setTimeout: 10000});
+        if (fs.existsSync(path.join(__dirname, `../assets/audio/${cmd}`))) {
+            let vc = client.channels.cache.get(id);
+            vc ? commands.voiceMessage(cmd, msg, vc) : null;
         }
         switch(cmd) {
             case 'pathetic':
